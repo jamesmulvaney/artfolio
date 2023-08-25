@@ -1,0 +1,8 @@
+mutation ChangeUsername($newUsername: String!, $password: String!) {
+  changeUsername(newUsername: $newUsername, password: $password) {
+    errors {
+      ...CommonError
+    }
+    changed
+  }
+}

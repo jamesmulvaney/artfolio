@@ -1,0 +1,18 @@
+mutation EditProfile(
+  $avatar: String!
+  $banner: String!
+  $bio: String!
+  $displayName: String!
+) {
+  editProfile(
+    avatar: $avatar
+    banner: $banner
+    bio: $bio
+    displayName: $displayName
+  ) {
+    errors {
+      ...CommonError
+    }
+    changed
+  }
+}

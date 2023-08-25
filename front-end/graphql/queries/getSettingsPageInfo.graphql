@@ -1,0 +1,8 @@
+query GetSettingsPageInfo {
+  currentUser {
+    ...CommonUser
+    email
+    postCount
+    createdAt
+  }
+}

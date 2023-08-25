@@ -1,0 +1,23 @@
+query GetUserProfile($username: String!) {
+  userByUsername(username: $username) {
+    id
+    username
+    displayName
+    avatar
+    banner
+    bio
+    posts {
+      id
+      title
+      image
+      description
+      replyCount
+      likeCount
+      createdAt
+    }
+    postCount
+    followerCount
+    followingCount
+    createdAt
+  }
+}

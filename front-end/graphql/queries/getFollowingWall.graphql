@@ -1,0 +1,17 @@
+query GetFollowingWall {
+  followingWall {
+    id
+    title
+    image
+    description
+    author {
+      id
+      username
+      displayName
+      avatar
+    }
+    likeCount
+    replyCount
+    createdAt
+  }
+}

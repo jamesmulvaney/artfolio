@@ -1,0 +1,3 @@
+mutation DeletePost($pid: Float!) {
+  deletePost(pid: $pid)
+}

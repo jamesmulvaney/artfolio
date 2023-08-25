@@ -1,0 +1,6 @@
+query GetRelationInfo($id: Float!) {
+  getRelationInfo(id: $id) {
+    isFollowing
+    isProfileOwner
+  }
+}

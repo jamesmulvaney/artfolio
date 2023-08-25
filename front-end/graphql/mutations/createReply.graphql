@@ -1,0 +1,19 @@
+mutation CreateReply($pid: Float!, $text: String!) {
+  createReply(pid: $pid, text: $text) {
+    errors {
+      ...CommonError
+    }
+    reply {
+      id
+      text
+      author {
+        id
+        username
+        displayName
+        avatar
+      }
+      likeCount
+      createdAt
+    }
+  }
+}

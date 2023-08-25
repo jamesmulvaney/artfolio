@@ -1,0 +1,17 @@
+query SearchForPost($query: String!) {
+  searchPost(query: $query) {
+    id
+    title
+    image
+    description
+    author {
+      id
+      username
+      displayName
+      avatar
+    }
+    likeCount
+    replyCount
+    createdAt
+  }
+}

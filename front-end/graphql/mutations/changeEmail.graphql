@@ -1,0 +1,9 @@
+mutation ChangeEmail($newEmail: String!, $password: String!) {
+  changeEmail(newEmail: $newEmail, password: $password) {
+    errors {
+      field
+      message
+    }
+    changed
+  }
+}

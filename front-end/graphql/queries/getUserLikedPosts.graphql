@@ -1,0 +1,7 @@
+query GetUserLikedPosts {
+  currentUser {
+    likedPosts {
+      id
+    }
+  }
+}

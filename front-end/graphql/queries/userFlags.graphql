@@ -1,0 +1,6 @@
+query GetFlags {
+  currentUser {
+    id
+    flags
+  }
+}

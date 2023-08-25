@@ -1,0 +1,20 @@
+query GetTopPosts {
+  topPosts {
+    id
+    title
+    image
+    description
+    replyCount
+    author {
+      id
+      username
+      displayName
+      avatar
+    }
+    likedBy {
+      id
+    }
+    likeCount
+    createdAt
+  }
+}

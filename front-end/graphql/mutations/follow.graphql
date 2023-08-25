@@ -1,0 +1,11 @@
+mutation Follow($tid: Float!) {
+  follow(tid: $tid) {
+    errors {
+      ...CommonError
+    }
+    follow {
+      userId
+      followingId
+    }
+  }
+}

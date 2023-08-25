@@ -1,0 +1,3 @@
+mutation Unfollow($tid: Float!) {
+  unfollow(tid: $tid)
+}

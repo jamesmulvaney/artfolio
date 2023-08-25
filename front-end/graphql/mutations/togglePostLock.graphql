@@ -1,0 +1,3 @@
+mutation TogglePostLock($id: Float!) {
+  togglePostLock(id: $id)
+}
