@@ -13,6 +13,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import { FaHeart, FaLink } from "react-icons/fa";
 import Head from "next/head";
+import ModalToggleLikeButton from "@/components/postModal/ModalToggleLikeButton";
 
 type PostPageProps = {};
 
@@ -116,11 +117,12 @@ function PostPage({}: PostPageProps) {
                     className="object-contain h-full w-auto max-h-screen"
                   />
                 </div>
-                <div className="inline-flex space-x-3 text-sm mt-3">
-                  <button className="rounded-full inline-flex items-center mt-1 px-3 py-1 text-sm outline outline-1 dark:outline-white/20 hover:dark:text-pink-500 hover:dark:bg-zinc-600 transition duration-300 disabled:cursor-not-allowed">
-                    <FaHeart className="mr-1.5" />
-                    {data?.post?.likeCount}
-                  </button>
+                <div className="inline-flex space-x-3 text-sm font-semibold mt-3">
+                  <ModalToggleLikeButton
+                    likeCount={data?.post?.likeCount!}
+                    likedPosts={currentUserData?.currentUser?.likedPosts!}
+                    postId={data?.post?.id!}
+                  />
                   <button
                     onClick={() => {
                       navigator.clipboard.writeText(

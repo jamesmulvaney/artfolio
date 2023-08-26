@@ -3,8 +3,6 @@ import {
   CurrentUserQuery,
   GetPostDocument,
   GetPostQuery,
-  GetUserProfileDocument,
-  GetUserProfileQuery,
   ToggleLikeMutation,
 } from "@/codegen/graphql";
 import { ApolloCache } from "@apollo/client";

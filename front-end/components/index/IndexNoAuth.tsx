@@ -17,7 +17,7 @@ function IndexNoAuth({}: IndexNoAuthProps) {
           priority
           className="object-cover w-screen h-full"
         />
-        <div className="absolute top-0 h-[75vh] w-full flex flex-col justify-center items-center backdrop-brightness-75">
+        <div className="absolute top-0 h-[75vh] w-full flex flex-col justify-center items-center backdrop-brightness-75 text-center">
           <h1 className="text-4xl text-white font-semibold">
             Welcome to Artfolio!
           </h1>
