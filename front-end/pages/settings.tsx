@@ -9,12 +9,13 @@ import dayjs from "dayjs";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import { FaPencilAlt, FaTrash } from "react-icons/fa";
+import { FaPencilAlt } from "react-icons/fa";
 import SettingsModalWrapper from "@/components/settings/SettingsModalWrapper";
 import ChangeUsernameForm from "@/components/forms/ChangeUsernameForm";
 import { useRouter } from "next/router";
 import ChangeEmailForm from "@/components/forms/ChangeEmailForm";
 import ChangePasswordForm from "@/components/forms/ChangePasswordForm";
+import SettingsLoadingSkeleton from "@/components/settings/loading/SettingsLoadingSkeleton";
 
 type SettingsPageProps = {};
 
@@ -25,7 +26,14 @@ function SettingsPage({}: SettingsPageProps) {
     useGetSettingsPageInfoQuery();
 
   if (settingsLoading) {
-    return <Layout>Loading</Layout>;
+    return (
+      <Layout>
+        <Head>
+          <title>Settings | Artfolio</title>
+        </Head>
+        <SettingsLoadingSkeleton />
+      </Layout>
+    );
   }
 
   if (!settingsLoading && !settingsData?.currentUser) {

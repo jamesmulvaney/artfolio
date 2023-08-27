@@ -30,7 +30,7 @@ function SearchForm({}: SearchFormProps) {
             id="query"
             name="query"
             type="text"
-            placeholder="The morning sky..."
+            placeholder="Search..."
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.query}

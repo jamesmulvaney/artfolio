@@ -41,11 +41,15 @@ function PostPage({}: PostPageProps) {
       </div>
     );
 
+  const pageTitle = data?.post
+    ? `${data.post.title} | Artfolio`
+    : "Post | Artfolio";
+
   return (
     <>
       <Head>
-        <title>Title Here | Artfolio</title>
-        <meta property="og:title" content={`Title Here @Artfolio`} />
+        <title>{pageTitle}</title>
+        <meta property="og:title" content={data?.post?.title} key="title" />
       </Head>
       <Layout>
         <div className="flex justify-center sm:mt-5">

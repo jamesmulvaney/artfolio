@@ -58,6 +58,7 @@ function ProfilePage({}: ProfilePageProps) {
           content={`${user.displayName} @Artfolio`}
           key="ogtitle"
         />
+        <meta property="og:image" content={user.avatar} key="ogimage" />
       </Head>
       <Layout>
         <div className="flex justify-center sm:mt-5">
