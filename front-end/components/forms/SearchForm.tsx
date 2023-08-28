@@ -13,7 +13,6 @@ function SearchForm({}: SearchFormProps) {
       query: "",
     },
     onSubmit: (values) => {
-      console.log(values);
       if (values.query.length === 0) {
         formik.resetForm();
       } else {
